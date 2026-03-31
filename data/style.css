@@ -1,0 +1,108 @@
+/* Modern App Store Theme */
+
+:root {
+    --card-radius: 16px;
+    --transition-speed: 0.3s;
+    --hover-bg: alpha(@window_bg_color, 0.8);
+}
+
+.app-card {
+    min-width: 200px;
+    min-height: 260px;
+    padding: 24px;
+    margin: 8px;
+    border: 1px solid alpha(@window_border_color, 0.5);
+    border-radius: var(--card-radius);
+    background-color: @window_bg_color;
+    transition: transform var(--transition-speed) cubic-bezier(0.2, 0, 0, 1),
+                box-shadow var(--transition-speed) cubic-bezier(0.2, 0, 0, 1),
+                background-color var(--transition-speed) ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.app-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    background-color: var(--hover-bg);
+    border-color: alpha(@accent_color, 0.3);
+}
+
+.card-icon {
+    margin-bottom: 16px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+    transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.app-card:hover .card-icon {
+    transform: scale(1.1) rotate(2deg);
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+    color: @window_fg_color;
+}
+
+.card-subtitle {
+    font-size: 0.85rem;
+    color: alpha(@window_fg_color, 0.7);
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+/* Modern Buttons */
+button.suggested-action,
+button.destructive-action,
+button.accent {
+    border-radius: 12px;
+    padding: 8px 16px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+button.suggested-action:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 6px 12px alpha(@suggested_bg_color, 0.4);
+    transform: translateY(-1px);
+}
+
+button.destructive-action:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 6px 12px alpha(@destructive_bg_color, 0.4);
+    transform: translateY(-1px);
+}
+
+/* Spinner adjustment */
+.spinner {
+    opacity: 0.8;
+}
+
+/* Sidebar Styling */
+.navigation-sidebar {
+    background-color: @window_bg_color;
+    padding: 10px;
+}
+
+.navigation-sidebar row {
+    border-radius: 10px;
+    margin: 2px 0;
+    transition: background-color 0.2s ease;
+}
+
+.navigation-sidebar row:selected {
+    background-color: alpha(@accent_color, 0.15);
+    color: @accent_color;
+}
+
+/* Welcome Page (StatusPage) tweaks */
+.status-page-icon {
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+}
+
+/* Scroll Smoothing */
+scrolledwindow {
+    transition: all 0.5s ease;
+}

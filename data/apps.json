@@ -1,0 +1,399 @@
+{
+    "navegadores": [
+        {
+            "name": "Zen Browser",
+            "package_name": "zen-browser",
+            "repo_cmd": "dnf copr enable -y sneexy/zen-browser",
+            "repo_id": "_copr:sneexy:zen-browser.repo",
+            "icon": "zen-browser",
+            "description": "Navegador moderno baseado em Firefox com abas verticais."
+        },
+        {
+            "name": "Brave Browser",
+            "package_name": "brave-browser",
+            "repo_cmd": "dnf config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo && rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc",
+            "repo_id": "brave-browser.repo",
+            "icon": "brave",
+            "description": "Navegador focado em privacidade com bloqueio de anúncios nativo."
+        },
+        {
+            "name": "Google Chrome",
+            "package_name": "google-chrome-stable",
+            "repo_id": "google-chrome.repo",
+            "icon": "google-chrome",
+            "description": "O navegador oficial do Google, rápido e seguro."
+        },
+        {
+            "name": "Firefox",
+            "package_name": "firefox",
+            "icon": "firefox",
+            "description": "O navegador padrão do Fedora, focado em liberdade e privacidade."
+        },
+        {
+            "name": "Chromium",
+            "package_name": "chromium",
+            "icon": "chromium",
+            "description": "A versão open-source do Chrome, direto dos repositórios Fedora."
+        },
+        {
+            "name": "Microsoft Edge",
+            "package_name": "microsoft-edge-stable",
+            "repo_cmd": "rpm --import https://packages.microsoft.com/keys/microsoft.asc && dnf config-manager addrepo --from-repofile=https://packages.microsoft.com/yumrepos/edge",
+            "repo_id": "microsoft-edge.repo",
+            "icon": "microsoft-edge",
+            "description": "O navegador da Microsoft com recursos de IA e abas verticais."
+        },
+        {
+            "name": "Opera Stable",
+            "package_name": "opera-stable",
+            "repo_cmd": "rpm --import https://rpm.opera.com/rpmrepo.key && dnf config-manager addrepo --from-repofile=https://rpm.opera.com/rpm",
+            "repo_id": "opera.repo",
+            "icon": "opera",
+            "description": "Navegador com VPN gratuita e bloqueador de anúncios integrados."
+        },
+        {
+            "name": "Vivaldi",
+            "package_name": "vivaldi-stable",
+            "cmd": "dnf install -y https://downloads.vivaldi.com/stable/vivaldi-stable-latest.x86_64.rpm",
+            "icon": "vivaldi",
+            "description": "O navegador mais customizável para usuários avançados."
+        },
+        {
+            "name": "LibreWolf",
+            "package_name": "librewolf",
+            "repo_cmd": "dnf config-manager addrepo --from-repofile=https://repo.librewolf.net/librewolf.repo",
+            "repo_id": "librewolf.repo",
+            "icon": "librewolf",
+            "description": "Navegador focado em privacidade máxima e sem telemetria."
+        },
+        {
+            "name": "Floorp",
+            "package_name": "floorp",
+            "repo_cmd": "dnf copr enable -y proletarius101/floorp",
+            "repo_id": "_copr:proletarius101:floorp.repo",
+            "icon": "floorp",
+            "description": "Fork japonês do Firefox, extremamente rápido e bonito."
+        }
+    ],
+    "criadores": [
+        {
+            "name": "GPU Screen Recorder",
+            "package_name": "gpu-screen-recorder-ui",
+            "repo_cmd": "dnf copr enable -y brycensranch/gpu-screen-recorder-git",
+            "repo_id": "_copr:brycensranch:gpu-screen-recorder-git.repo",
+            "icon": "video-display-symbolic",
+            "description": "Gravador de tela extremamente rápido com impacto quase zero na CPU/GPU."
+        },
+        {
+            "name": "OBS Studio",
+            "package_name": "obs-studio",
+            "icon": "obs",
+            "description": "Software profissional para gravação de vídeo e transmissões."
+        },
+        {
+            "name": "OBS Plugins (Extra)",
+            "package_name": "obs-studio-plugin-background-removal",
+            "repo_cmd": "dnf copr enable -y tarulia/obs-studio-plugins",
+            "repo_id": "_copr:tarulia:obs-studio-plugins.repo",
+            "icon": "obs",
+            "description": "Habilita diversos plugins extras (Remoção de fundo, GStreamer, etc) via COPR tarulia."
+        }
+    ],
+    "editores": [
+        {
+            "name": "VS Codium",
+            "package_name": "codium",
+            "repo_cmd": "rpm --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg && dnf config-manager addrepo --from-repofile=https://paulcarroty.com/repository/rpm/",
+            "repo_id": "vscodium.repo",
+            "icon": "vscodium",
+            "description": "Editor de código open-source, livre de telemetria da Microsoft."
+        },
+        {
+            "name": "Zed Editor",
+            "package_name": "zed",
+            "repo_cmd": "dnf copr enable -y pgdev/zed",
+            "repo_id": "_copr:pgdev:zed.repo",
+            "icon": "zed",
+            "description": "Editor de código de alta performance escrito em Rust."
+        }
+    ],
+    "terminal": [
+        {
+            "name": "Kitty",
+            "package_name": "kitty",
+            "icon": "kitty",
+            "description": "Terminal emulador moderno e rápido acelerado por GPU."
+        },
+        {
+            "name": "Ghostty",
+            "package_name": "ghostty",
+            "repo_cmd": "dnf copr enable -y pgdev/ghostty",
+            "repo_id": "_copr:pgdev:ghostty.repo",
+            "icon": "ghostty",
+            "description": "Terminal emulador ultrarrápido escrito em Zig."
+        }
+    ],
+    "downloads": [
+        {
+            "name": "QBittorrent",
+            "package_name": "qbittorrent",
+            "icon": "qbittorrent",
+            "description": "O melhor cliente BitTorrent: leve, open-source e sem anúncios."
+        },
+        {
+            "name": "AB Download Manager",
+            "package_name": "ab-download-manager",
+            "repo_cmd": "dnf copr enable -y anifyuliansyah/ab-download-manager",
+            "repo_id": "_copr:anifyuliansyah:ab-download-manager.repo",
+            "icon": "ab-download-manager",
+            "description": "Gerenciador de downloads moderno e rápido escrito em Java/Kotlin."
+        },
+        {
+            "name": "Free Download Manager",
+            "package_name": "freedownloadmanager",
+            "cmd": "dnf install -y https://files2.freedownloadmanager.org/6/latest/fdm_x64.rpm",
+            "icon": "fdm",
+            "description": "Acelerador de downloads poderoso com suporte a torrents."
+        }
+    ],
+    "jogos": [
+        {
+            "name": "Hydra Launcher",
+            "package_name": "hydralauncher",
+            "cmd": "dnf install -y https://github.com/hydralauncher/hydra/releases/download/v3.9.5/hydralauncher-3.9.5.x86_64.rpm",
+            "icon": "system-component-software",
+            "description": "Launcher de jogos focado em privacidade e biblioteca unificada."
+        },
+        {
+            "name": "Steam",
+            "package_name": "steam",
+            "icon": "steam",
+            "description": "Plataforma de jogos da Valve (requer RPM Fusion habilitado)."
+        },
+        {
+            "name": "Faugus Launcher",
+            "package_name": "faugus-launcher",
+            "repo_cmd": "dnf copr enable -y faugus/faugus-launcher",
+            "repo_id": "_copr:faugus:faugus-launcher.repo",
+            "icon": "faugus-launcher",
+            "description": "Launcher leve e otimizado para jogos focado em performance."
+        },
+        {
+            "name": "Lutris",
+            "package_name": "lutris",
+            "icon": "lutris",
+            "description": "Gerenciador de jogos tudo-em-um (Wine, GOG, Epic, Emuladores)."
+        },
+        {
+            "name": "Heroic Launcher",
+            "package_name": "heroic-games-launcher-bin",
+            "repo_cmd": "dnf copr enable -y atim/heroic-games-launcher",
+            "repo_id": "_copr:atim:heroic-games-launcher.repo",
+            "icon": "heroic",
+            "description": "Launcher para Epic Games e GOG com foco em performance."
+        },
+        {
+            "name": "MangoHud + Goverlay",
+            "package_name": "mangohud",
+            "cmd": "dnf install -y mangohud goverlay",
+            "icon": "mangohud",
+            "description": "Overlay de monitoramento de performance para jogos Linux."
+        },
+        {
+            "name": "GameMode",
+            "package_name": "gamemode",
+            "icon": "utilities-terminal",
+            "description": "Daemon que otimiza automaticamente o sistema para jogos."
+        },
+        {
+            "name": "Wine Staging",
+            "package_name": "wine",
+            "icon": "wine",
+            "description": "Camada de compatibilidade para rodar apps Windows no Linux."
+        },
+        {
+            "name": "ProtonPlus",
+            "package_name": "protonplus",
+            "repo_cmd": "dnf copr enable -y alvr/protonplus",
+            "repo_id": "_copr:alvr:protonplus.repo",
+            "icon": "proton-plus",
+            "description": "Gerenciador simples de versões do Proton e Wine."
+        }
+    ],
+    "performance": [
+        {
+            "name": "CoreCtrl (AMD)",
+            "package_name": "corectrl",
+            "repo_cmd": "dnf copr enable -y corectrl/corectrl",
+            "repo_id": "_copr:corectrl:corectrl.repo",
+            "icon": "corectrl",
+            "description": "Controle de hardware (overclock/ventoinhas) para AMD."
+        },
+        {
+            "name": "LACT (GPU Control)",
+            "package_name": "lact",
+            "repo_cmd": "dnf copr enable -y solopasha/lact",
+            "repo_id": "_copr:solopasha:lact.repo",
+            "icon": "preferences-desktop-theme",
+            "description": "Interface moderna para controle de GPUs AMD e Nvidia."
+        }
+    ],
+    "shell": [
+        {
+            "name": "Fish Shell",
+            "package_name": "fish",
+            "icon": "fish",
+            "description": "Shell amigável com sugestões inteligentes e cores nativas."
+        },
+        {
+            "name": "Starship",
+            "package_name": "starship",
+            "icon": "starship",
+            "description": "Prompt de comando rápido e customizável para qualquer shell."
+        },
+        {
+            "name": "Fastfetch",
+            "package_name": "fastfetch",
+            "icon": "fastfetch",
+            "description": "Exibe informações do sistema com rapidez e estilo no terminal."
+        }
+    ],
+    "media": [
+        {
+            "name": "VLC",
+            "package_name": "vlc",
+            "icon": "vlc",
+            "description": "O reprodutor multimídia universal mais famoso do mundo."
+        },
+        {
+            "name": "MPV",
+            "package_name": "mpv",
+            "icon": "mpv",
+            "description": "Player de vídeo minimalista, poderoso e focado em performance."
+        },
+        {
+            "name": "Spotify (Nativo)",
+            "package_name": "spotify-client",
+            "repo_cmd": "dnf config-manager addrepo --from-repofile=https://negativo17.org/repos/fedora-spotify.repo",
+            "repo_id": "fedora-spotify.repo",
+            "icon": "spotify",
+            "description": "Cliente nativo de música via repositório Negativo17."
+        },
+        {
+            "name": "Easy Effects",
+            "package_name": "easyeffects",
+            "icon": "easyeffects",
+            "description": "Equalizador e processador de efeitos de áudio para PipeWire."
+        },
+        {
+            "name": "Stremio",
+            "package_name": "stremio",
+            "cmd": "dnf install -y https://dl.strem.io/shell-linux/v4.4.168/stremio_4.4.168-1.x86_64.rpm",
+            "icon": "stremio",
+            "description": "Central multimídia para assistir filmes e séries nativamente."
+        }
+    ],
+    "comunicação": [
+        {
+            "name": "Equibop (Discord Mod)",
+            "package_name": "equibop",
+            "cmd": "dnf install -y https://github.com/Equicord/Equibop/releases/download/v3.1.9/equibop-3.1.9.x86_64.rpm",
+            "icon": "system-component-software",
+            "description": "Modificação do Discord focada em privacidade e customização visual."
+        },
+        {
+            "name": "Discord",
+            "package_name": "discord",
+            "cmd": "dnf install -y https://discord.com/api/download?platform=linux&format=rpm",
+            "icon": "discord",
+            "description": "A plataforma de comunicação padrão para comunidades e gamers."
+        },
+        {
+            "name": "Vesktop (Discord Web)",
+            "package_name": "vesktop",
+            "repo_cmd": "dnf copr enable -y vencord/vesktop",
+            "repo_id": "_copr:vencord:vesktop.repo",
+            "icon": "vesktop",
+            "description": "Cliente Discord otimizado com Vencord e melhor suporte a Wayland."
+        },
+        {
+            "name": "Telegram Desktop",
+            "package_name": "telegram-desktop",
+            "icon": "telegram",
+            "description": "App de mensagens focado em velocidade e segurança."
+        }
+    ],
+    "customização": [
+        {
+            "name": "Hyprland",
+            "package_name": "hyprland",
+            "repo_cmd": "dnf copr enable -y solopasha/hyprland",
+            "repo_id": "_copr:solopasha:hyprland.repo",
+            "icon": "preferences-desktop-display",
+            "description": "Compositor Wayland dinâmico com animações fluidas."
+        },
+        {
+            "name": "Niri",
+            "package_name": "niri",
+            "repo_cmd": "dnf copr enable -y yuriw/niri",
+            "repo_id": "_copr:yuriw:niri.repo",
+            "icon": "preferences-desktop-display",
+            "description": "Compositor de janelas em 'scroll' horizontal para Wayland."
+        },
+        {
+            "name": "Nwg-look",
+            "package_name": "nwg-look",
+            "repo_cmd": "dnf copr enable -y nwg/nwg-shell",
+            "repo_id": "_copr:nwg:nwg-shell.repo",
+            "icon": "preferences-desktop-theme",
+            "description": "Ferramenta essencial para configurar temas GTK no Wayland."
+        },
+        {
+            "name": "Qt6ct",
+            "package_name": "qt6ct",
+            "icon": "preferences-desktop-theme",
+            "description": "Ferramenta de configuração para aplicativos Qt6 no GNOME/Wayland."
+        }
+    ],
+    "sistema": [
+        {
+            "name": "Wi-Fi Hotspot",
+            "package_name": "linux-wifi-hotspot",
+            "repo_cmd": "dnf copr enable -y zinix01/linux-wifi-hotspot",
+            "repo_id": "_copr:zinix01:linux-wifi-hotspot.repo",
+            "cmd": "dnf install -y linux-wifi-hotspot && systemctl enable --now create_ap",
+            "icon": "network-wireless-symbolic",
+            "description": "Cria um ponto de acesso Wi-Fi. (Habilita serviço automaticamente no boot)."
+        },
+        {
+            "name": "Btop",
+            "package_name": "btop",
+            "icon": "btop",
+            "description": "Monitor de recursos do sistema moderno e interativo."
+        },
+        {
+            "name": "Nvtop",
+            "package_name": "nvtop",
+            "icon": "nvtop",
+            "description": "Monitor de performance focado em GPUs (Nvidia/AMD/Intel."
+        },
+        {
+            "name": "7-Zip",
+            "package_name": "p7zip",
+            "icon": "system-help",
+            "description": "A versão clássica do compactador 7zip para Linux."
+        },
+        {
+            "name": "Dolphin",
+            "package_name": "dolphin",
+            "icon": "dolphin",
+            "description": "O poderoso gerenciador de arquivos do ambiente KDE."
+        },
+        {
+            "name": "Nautilus",
+            "package_name": "nautilus",
+            "icon": "nautilus",
+            "description": "O gerenciador de arquivos padrão do GNOME, simples e limpo."
+        }
+    ]
+}

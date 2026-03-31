@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Fedora App Store
+Comment=Instale softwares nativos e habilite repositórios no Fedora
+Exec=fedora-app-store
+Icon=fedora-app-store
+Terminal=false
+Type=Application
+Categories=System;Settings;
+Keywords=fedora;store;apps;dnf;
+StartupNotify=true
