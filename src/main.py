@@ -73,12 +73,17 @@ class AppRow(Gtk.Box):
             if res.returncode == 0:
                 return True
 
-        # Tenta o formato estendido do Fedora COPR
+        # Tenta o formato estendido do Fedora COPR (DNF4 e DNF5)
         if repo_id.startswith("_copr:"):
             parts = repo_id.split(":", 1)
             if len(parts) == 2:
-                expanded_id = f"_copr:copr.fedorainfracloud.org:{parts[1]}"
-                if os.path.exists(f"/etc/yum.repos.d/{expanded_id}"):
+                # DNF4 format
+                expanded_id_dnf4 = f"_copr:copr.fedorainfracloud.org:{parts[1]}"
+                # DNF5 format
+                expanded_id_dnf5 = f"copr:copr.fedorainfracloud.org:{parts[1]}"
+                
+                if os.path.exists(f"/etc/yum.repos.d/{expanded_id_dnf4}") or \
+                   os.path.exists(f"/etc/yum.repos.d/{expanded_id_dnf5}"):
                     return True
                     
         return False

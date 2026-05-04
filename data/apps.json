@@ -3,7 +3,7 @@
         {
             "name": "Zen Browser",
             "package_name": "zen-browser",
-            "repo_cmd": "dnf copr enable -y sneexy/zen-browser",
+            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y sneexy/zen-browser",
             "repo_id": "_copr:sneexy:zen-browser.repo",
             "icon": "zen-browser",
             "description": "Navegador moderno baseado em Firefox com abas verticais."
@@ -38,7 +38,7 @@
         {
             "name": "Microsoft Edge",
             "package_name": "microsoft-edge-stable",
-            "repo_cmd": "rpm --import https://packages.microsoft.com/keys/microsoft.asc && dnf config-manager addrepo --from-repofile=https://packages.microsoft.com/yumrepos/edge",
+            "repo_cmd": "rpm --import https://packages.microsoft.com/keys/microsoft.asc && dnf config-manager addrepo --id=microsoft-edge --set=baseurl=https://packages.microsoft.com/yumrepos/edge",
             "repo_id": "microsoft-edge.repo",
             "icon": "microsoft-edge",
             "description": "O navegador da Microsoft com recursos de IA e abas verticais."
@@ -54,9 +54,11 @@
         {
             "name": "Vivaldi",
             "package_name": "vivaldi-stable",
-            "cmd": "dnf install -y https://downloads.vivaldi.com/stable/vivaldi-stable-latest.x86_64.rpm",
+            "cmd": "dnf install -y vivaldi-stable",
             "icon": "vivaldi",
-            "description": "O navegador mais customiz\u00e1vel para usu\u00e1rios avan\u00e7ados."
+            "description": "O navegador mais customiz\u00e1vel para usu\u00e1rios avan\u00e7ados.",
+            "repo_id": "vivaldi-fedora.repo",
+            "repo_cmd": "dnf config-manager addrepo --from-repofile=https://repo.vivaldi.com/archive/vivaldi-fedora.repo"
         },
         {
             "name": "LibreWolf",
@@ -69,7 +71,7 @@
         {
             "name": "Floorp",
             "package_name": "floorp",
-            "repo_cmd": "dnf copr enable -y proletarius101/floorp",
+            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y proletarius101/floorp",
             "repo_id": "_copr:proletarius101:floorp.repo",
             "icon": "floorp",
             "description": "Fork japon\u00eas do Firefox, extremamente r\u00e1pido e bonito."
@@ -79,7 +81,7 @@
         {
             "name": "GPU Screen Recorder",
             "package_name": "gpu-screen-recorder-ui",
-            "repo_cmd": "dnf copr enable -y brycensranch/gpu-screen-recorder-git",
+            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y brycensranch/gpu-screen-recorder-git",
             "repo_id": "_copr:brycensranch:gpu-screen-recorder-git.repo",
             "icon": "video-display-symbolic",
             "description": "Gravador de tela extremamente r\u00e1pido com impacto quase zero na CPU/GPU."
@@ -95,7 +97,7 @@
         {
             "name": "OBS Plugins (Extra)",
             "package_name": "obs-studio-plugin-background-removal",
-            "repo_cmd": "dnf copr enable -y tarulia/obs-studio-plugins",
+            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y tarulia/obs-studio-plugins",
             "repo_id": "_copr:tarulia:obs-studio-plugins.repo",
             "icon": "obs",
             "description": "Habilita diversos plugins extras (Remo\u00e7\u00e3o de fundo, GStreamer, etc) via COPR tarulia."
@@ -105,7 +107,7 @@
         {
             "name": "VS Codium",
             "package_name": "codium",
-            "repo_cmd": "rpm --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg && dnf config-manager addrepo --from-repofile=https://paulcarroty.com/repository/rpm/",
+            "repo_cmd": "rpm --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg && dnf config-manager addrepo --id=vscodium --set=baseurl=https://paulcarroty.com/repository/rpm/",
             "repo_id": "vscodium.repo",
             "icon": "vscodium",
             "description": "Editor de c\u00f3digo open-source, livre de telemetria da Microsoft."
@@ -113,7 +115,7 @@
         {
             "name": "Zed Editor",
             "package_name": "zed",
-            "repo_cmd": "dnf copr enable -y pgdev/zed",
+            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y pgdev/zed",
             "repo_id": "_copr:pgdev:zed.repo",
             "icon": "zed",
             "description": "Editor de c\u00f3digo de alta performance escrito em Rust."
@@ -129,7 +131,7 @@
         {
             "name": "Ghostty",
             "package_name": "ghostty",
-            "repo_cmd": "dnf copr enable -y pgdev/ghostty",
+            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y pgdev/ghostty",
             "repo_id": "_copr:pgdev:ghostty.repo",
             "icon": "ghostty",
             "description": "Terminal emulador ultrarr\u00e1pido escrito em Zig."
@@ -145,7 +147,7 @@
         {
             "name": "AB Download Manager",
             "package_name": "ab-download-manager",
-            "repo_cmd": "dnf copr enable -y anifyuliansyah/ab-download-manager",
+            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y anifyuliansyah/ab-download-manager",
             "repo_id": "_copr:anifyuliansyah:ab-download-manager.repo",
             "icon": "ab-download-manager",
             "description": "Gerenciador de downloads moderno e r\u00e1pido escrito em Java/Kotlin."
@@ -153,7 +155,7 @@
         {
             "name": "Free Download Manager",
             "package_name": "freedownloadmanager",
-            "cmd": "dnf install -y https://files2.freedownloadmanager.org/6/latest/fdm_x64.rpm",
+            "cmd": "echo \"FDM does not provide native RPM. Please use AB Download Manager.\" && exit 1",
             "icon": "fdm",
             "description": "Acelerador de downloads poderoso com suporte a torrents."
         }
@@ -177,7 +179,7 @@
         {
             "name": "Faugus Launcher",
             "package_name": "faugus-launcher",
-            "repo_cmd": "dnf copr enable -y faugus/faugus-launcher",
+            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y faugus/faugus-launcher",
             "repo_id": "_copr:faugus:faugus-launcher.repo",
             "icon": "faugus-launcher",
             "description": "Launcher leve e otimizado para jogos focado em performance."
@@ -191,7 +193,7 @@
         {
             "name": "Heroic Launcher",
             "package_name": "heroic-games-launcher-bin",
-            "repo_cmd": "dnf copr enable -y atim/heroic-games-launcher",
+            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y atim/heroic-games-launcher",
             "repo_id": "_copr:atim:heroic-games-launcher.repo",
             "icon": "heroic",
             "description": "Launcher para Epic Games e GOG com foco em performance."
@@ -218,7 +220,7 @@
         {
             "name": "ProtonPlus",
             "package_name": "protonplus",
-            "repo_cmd": "dnf copr enable -y alvr/protonplus",
+            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y alvr/protonplus",
             "repo_id": "_copr:alvr:protonplus.repo",
             "icon": "proton-plus",
             "description": "Gerenciador simples de vers\u00f5es do Proton e Wine."
@@ -228,7 +230,7 @@
         {
             "name": "CoreCtrl (AMD)",
             "package_name": "corectrl",
-            "repo_cmd": "dnf copr enable -y corectrl/corectrl",
+            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y corectrl/corectrl",
             "repo_id": "_copr:corectrl:corectrl.repo",
             "icon": "corectrl",
             "description": "Controle de hardware (overclock/ventoinhas) para AMD."
@@ -236,7 +238,7 @@
         {
             "name": "LACT (GPU Control)",
             "package_name": "lact",
-            "repo_cmd": "dnf copr enable -y solopasha/lact",
+            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y solopasha/lact",
             "repo_id": "_copr:solopasha:lact.repo",
             "icon": "preferences-desktop-theme",
             "description": "Interface moderna para controle de GPUs AMD e Nvidia."
@@ -321,7 +323,7 @@
         {
             "name": "Vesktop (Discord Web)",
             "package_name": "vesktop",
-            "repo_cmd": "dnf copr enable -y vencord/vesktop",
+            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y vencord/vesktop",
             "repo_id": "_copr:vencord:vesktop.repo",
             "icon": "vesktop",
             "description": "Cliente Discord otimizado com Vencord e melhor suporte a Wayland."
@@ -337,7 +339,7 @@
         {
             "name": "Hyprland",
             "package_name": "hyprland",
-            "repo_cmd": "dnf copr enable -y solopasha/hyprland",
+            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y solopasha/hyprland",
             "repo_id": "_copr:solopasha:hyprland.repo",
             "icon": "preferences-desktop-display",
             "description": "Compositor Wayland din\u00e2mico com anima\u00e7\u00f5es fluidas."
@@ -345,7 +347,7 @@
         {
             "name": "Niri",
             "package_name": "niri",
-            "repo_cmd": "dnf copr enable -y yuriw/niri",
+            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y yuriw/niri",
             "repo_id": "_copr:yuriw:niri.repo",
             "icon": "preferences-desktop-display",
             "description": "Compositor de janelas em 'scroll' horizontal para Wayland."
@@ -353,7 +355,7 @@
         {
             "name": "Nwg-look",
             "package_name": "nwg-look",
-            "repo_cmd": "dnf copr enable -y nwg/nwg-shell",
+            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y nwg/nwg-shell",
             "repo_id": "_copr:nwg:nwg-shell.repo",
             "icon": "preferences-desktop-theme",
             "description": "Ferramenta essencial para configurar temas GTK no Wayland."
@@ -369,7 +371,7 @@
         {
             "name": "Wi-Fi Hotspot",
             "package_name": "linux-wifi-hotspot",
-            "repo_cmd": "dnf copr enable -y zinix01/linux-wifi-hotspot",
+            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y zinix01/linux-wifi-hotspot",
             "repo_id": "_copr:zinix01:linux-wifi-hotspot.repo",
             "cmd": "dnf install -y linux-wifi-hotspot && systemctl enable --now create_ap",
             "icon": "network-wireless-symbolic",
