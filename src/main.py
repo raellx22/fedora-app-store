@@ -67,6 +67,12 @@ class AppRow(Gtk.Box):
         if os.path.exists(f"/etc/yum.repos.d/{repo_id}"):
             return True
             
+        # Verifica pacotes de release (ex: rpmfusion-free-release)
+        if repo_id.endswith("-release"):
+            res = subprocess.run(["rpm", "-q", repo_id], capture_output=True)
+            if res.returncode == 0:
+                return True
+
         # Tenta o formato estendido do Fedora COPR
         if repo_id.startswith("_copr:"):
             parts = repo_id.split(":", 1)
@@ -97,7 +103,7 @@ class AppRow(Gtk.Box):
             label_text = "Remover"
             self.button.add_css_class("destructive-action")
         elif not self.is_repo_enabled():
-            label_text = "Habilitar Repo"
+            label_text = "Instalar (Requer Repo)"
             self.button.add_css_class("accent")
         else:
             label_text = "Instalar"
@@ -109,7 +115,12 @@ class AppRow(Gtk.Box):
         if self.is_installed():
             raw_cmd = f"dnf remove -y {self.app_data['package_name']}"
         elif not self.is_repo_enabled():
-            raw_cmd = self.app_data.get("repo_cmd")
+            repo_cmd = self.app_data.get("repo_cmd", "")
+            install_cmd = self.app_data.get("cmd", f"dnf install -y {self.app_data['package_name']}")
+            if repo_cmd:
+                raw_cmd = f"{repo_cmd} && {install_cmd}"
+            else:
+                raw_cmd = install_cmd
         else:
             raw_cmd = self.app_data.get(
                 "cmd", f"dnf install -y {self.app_data['package_name']}"

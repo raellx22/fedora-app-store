@@ -14,26 +14,26 @@
             "repo_cmd": "dnf config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo && rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc",
             "repo_id": "brave-browser.repo",
             "icon": "brave",
-            "description": "Navegador focado em privacidade com bloqueio de anúncios nativo."
+            "description": "Navegador focado em privacidade com bloqueio de an\u00fancios nativo."
         },
         {
             "name": "Google Chrome",
             "package_name": "google-chrome-stable",
             "repo_id": "google-chrome.repo",
             "icon": "google-chrome",
-            "description": "O navegador oficial do Google, rápido e seguro."
+            "description": "O navegador oficial do Google, r\u00e1pido e seguro."
         },
         {
             "name": "Firefox",
             "package_name": "firefox",
             "icon": "firefox",
-            "description": "O navegador padrão do Fedora, focado em liberdade e privacidade."
+            "description": "O navegador padr\u00e3o do Fedora, focado em liberdade e privacidade."
         },
         {
             "name": "Chromium",
             "package_name": "chromium",
             "icon": "chromium",
-            "description": "A versão open-source do Chrome, direto dos repositórios Fedora."
+            "description": "A vers\u00e3o open-source do Chrome, direto dos reposit\u00f3rios Fedora."
         },
         {
             "name": "Microsoft Edge",
@@ -49,14 +49,14 @@
             "repo_cmd": "rpm --import https://rpm.opera.com/rpmrepo.key && dnf config-manager addrepo --from-repofile=https://rpm.opera.com/rpm",
             "repo_id": "opera.repo",
             "icon": "opera",
-            "description": "Navegador com VPN gratuita e bloqueador de anúncios integrados."
+            "description": "Navegador com VPN gratuita e bloqueador de an\u00fancios integrados."
         },
         {
             "name": "Vivaldi",
             "package_name": "vivaldi-stable",
             "cmd": "dnf install -y https://downloads.vivaldi.com/stable/vivaldi-stable-latest.x86_64.rpm",
             "icon": "vivaldi",
-            "description": "O navegador mais customizável para usuários avançados."
+            "description": "O navegador mais customiz\u00e1vel para usu\u00e1rios avan\u00e7ados."
         },
         {
             "name": "LibreWolf",
@@ -64,7 +64,7 @@
             "repo_cmd": "dnf config-manager addrepo --from-repofile=https://repo.librewolf.net/librewolf.repo",
             "repo_id": "librewolf.repo",
             "icon": "librewolf",
-            "description": "Navegador focado em privacidade máxima e sem telemetria."
+            "description": "Navegador focado em privacidade m\u00e1xima e sem telemetria."
         },
         {
             "name": "Floorp",
@@ -72,7 +72,7 @@
             "repo_cmd": "dnf copr enable -y proletarius101/floorp",
             "repo_id": "_copr:proletarius101:floorp.repo",
             "icon": "floorp",
-            "description": "Fork japonês do Firefox, extremamente rápido e bonito."
+            "description": "Fork japon\u00eas do Firefox, extremamente r\u00e1pido e bonito."
         }
     ],
     "criadores": [
@@ -82,13 +82,15 @@
             "repo_cmd": "dnf copr enable -y brycensranch/gpu-screen-recorder-git",
             "repo_id": "_copr:brycensranch:gpu-screen-recorder-git.repo",
             "icon": "video-display-symbolic",
-            "description": "Gravador de tela extremamente rápido com impacto quase zero na CPU/GPU."
+            "description": "Gravador de tela extremamente r\u00e1pido com impacto quase zero na CPU/GPU."
         },
         {
             "name": "OBS Studio",
             "package_name": "obs-studio",
             "icon": "obs",
-            "description": "Software profissional para gravação de vídeo e transmissões."
+            "description": "Software profissional para grava\u00e7\u00e3o de v\u00eddeo e transmiss\u00f5es.",
+            "repo_id": "rpmfusion-free-release",
+            "repo_cmd": "dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
         },
         {
             "name": "OBS Plugins (Extra)",
@@ -96,7 +98,7 @@
             "repo_cmd": "dnf copr enable -y tarulia/obs-studio-plugins",
             "repo_id": "_copr:tarulia:obs-studio-plugins.repo",
             "icon": "obs",
-            "description": "Habilita diversos plugins extras (Remoção de fundo, GStreamer, etc) via COPR tarulia."
+            "description": "Habilita diversos plugins extras (Remo\u00e7\u00e3o de fundo, GStreamer, etc) via COPR tarulia."
         }
     ],
     "editores": [
@@ -106,7 +108,7 @@
             "repo_cmd": "rpm --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg && dnf config-manager addrepo --from-repofile=https://paulcarroty.com/repository/rpm/",
             "repo_id": "vscodium.repo",
             "icon": "vscodium",
-            "description": "Editor de código open-source, livre de telemetria da Microsoft."
+            "description": "Editor de c\u00f3digo open-source, livre de telemetria da Microsoft."
         },
         {
             "name": "Zed Editor",
@@ -114,7 +116,7 @@
             "repo_cmd": "dnf copr enable -y pgdev/zed",
             "repo_id": "_copr:pgdev:zed.repo",
             "icon": "zed",
-            "description": "Editor de código de alta performance escrito em Rust."
+            "description": "Editor de c\u00f3digo de alta performance escrito em Rust."
         }
     ],
     "terminal": [
@@ -122,7 +124,7 @@
             "name": "Kitty",
             "package_name": "kitty",
             "icon": "kitty",
-            "description": "Terminal emulador moderno e rápido acelerado por GPU."
+            "description": "Terminal emulador moderno e r\u00e1pido acelerado por GPU."
         },
         {
             "name": "Ghostty",
@@ -130,7 +132,7 @@
             "repo_cmd": "dnf copr enable -y pgdev/ghostty",
             "repo_id": "_copr:pgdev:ghostty.repo",
             "icon": "ghostty",
-            "description": "Terminal emulador ultrarrápido escrito em Zig."
+            "description": "Terminal emulador ultrarr\u00e1pido escrito em Zig."
         }
     ],
     "downloads": [
@@ -138,7 +140,7 @@
             "name": "QBittorrent",
             "package_name": "qbittorrent",
             "icon": "qbittorrent",
-            "description": "O melhor cliente BitTorrent: leve, open-source e sem anúncios."
+            "description": "O melhor cliente BitTorrent: leve, open-source e sem an\u00fancios."
         },
         {
             "name": "AB Download Manager",
@@ -146,7 +148,7 @@
             "repo_cmd": "dnf copr enable -y anifyuliansyah/ab-download-manager",
             "repo_id": "_copr:anifyuliansyah:ab-download-manager.repo",
             "icon": "ab-download-manager",
-            "description": "Gerenciador de downloads moderno e rápido escrito em Java/Kotlin."
+            "description": "Gerenciador de downloads moderno e r\u00e1pido escrito em Java/Kotlin."
         },
         {
             "name": "Free Download Manager",
@@ -168,7 +170,9 @@
             "name": "Steam",
             "package_name": "steam",
             "icon": "steam",
-            "description": "Plataforma de jogos da Valve (requer RPM Fusion habilitado)."
+            "description": "Plataforma de jogos da Valve (requer RPM Fusion habilitado).",
+            "repo_id": "rpmfusion-nonfree-release",
+            "repo_cmd": "dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
         },
         {
             "name": "Faugus Launcher",
@@ -217,7 +221,7 @@
             "repo_cmd": "dnf copr enable -y alvr/protonplus",
             "repo_id": "_copr:alvr:protonplus.repo",
             "icon": "proton-plus",
-            "description": "Gerenciador simples de versões do Proton e Wine."
+            "description": "Gerenciador simples de vers\u00f5es do Proton e Wine."
         }
     ],
     "performance": [
@@ -243,19 +247,19 @@
             "name": "Fish Shell",
             "package_name": "fish",
             "icon": "fish",
-            "description": "Shell amigável com sugestões inteligentes e cores nativas."
+            "description": "Shell amig\u00e1vel com sugest\u00f5es inteligentes e cores nativas."
         },
         {
             "name": "Starship",
             "package_name": "starship",
             "icon": "starship",
-            "description": "Prompt de comando rápido e customizável para qualquer shell."
+            "description": "Prompt de comando r\u00e1pido e customiz\u00e1vel para qualquer shell."
         },
         {
             "name": "Fastfetch",
             "package_name": "fastfetch",
             "icon": "fastfetch",
-            "description": "Exibe informações do sistema com rapidez e estilo no terminal."
+            "description": "Exibe informa\u00e7\u00f5es do sistema com rapidez e estilo no terminal."
         }
     ],
     "media": [
@@ -263,13 +267,17 @@
             "name": "VLC",
             "package_name": "vlc",
             "icon": "vlc",
-            "description": "O reprodutor multimídia universal mais famoso do mundo."
+            "description": "O reprodutor multim\u00eddia universal mais famoso do mundo.",
+            "repo_id": "rpmfusion-free-release",
+            "repo_cmd": "dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
         },
         {
             "name": "MPV",
             "package_name": "mpv",
             "icon": "mpv",
-            "description": "Player de vídeo minimalista, poderoso e focado em performance."
+            "description": "Player de v\u00eddeo minimalista, poderoso e focado em performance.",
+            "repo_id": "rpmfusion-free-release",
+            "repo_cmd": "dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
         },
         {
             "name": "Spotify (Nativo)",
@@ -277,36 +285,38 @@
             "repo_cmd": "dnf config-manager addrepo --from-repofile=https://negativo17.org/repos/fedora-spotify.repo",
             "repo_id": "fedora-spotify.repo",
             "icon": "spotify",
-            "description": "Cliente nativo de música via repositório Negativo17."
+            "description": "Cliente nativo de m\u00fasica via reposit\u00f3rio Negativo17."
         },
         {
             "name": "Easy Effects",
             "package_name": "easyeffects",
             "icon": "easyeffects",
-            "description": "Equalizador e processador de efeitos de áudio para PipeWire."
+            "description": "Equalizador e processador de efeitos de \u00e1udio para PipeWire."
         },
         {
             "name": "Stremio",
             "package_name": "stremio",
             "cmd": "dnf install -y https://dl.strem.io/shell-linux/v4.4.168/stremio_4.4.168-1.x86_64.rpm",
             "icon": "stremio",
-            "description": "Central multimídia para assistir filmes e séries nativamente."
+            "description": "Central multim\u00eddia para assistir filmes e s\u00e9ries nativamente."
         }
     ],
-    "comunicação": [
+    "comunica\u00e7\u00e3o": [
         {
             "name": "Equibop (Discord Mod)",
             "package_name": "equibop",
             "cmd": "dnf install -y https://github.com/Equicord/Equibop/releases/download/v3.1.9/equibop-3.1.9.x86_64.rpm",
             "icon": "system-component-software",
-            "description": "Modificação do Discord focada em privacidade e customização visual."
+            "description": "Modifica\u00e7\u00e3o do Discord focada em privacidade e customiza\u00e7\u00e3o visual."
         },
         {
             "name": "Discord",
             "package_name": "discord",
             "cmd": "dnf install -y https://discord.com/api/download?platform=linux&format=rpm",
             "icon": "discord",
-            "description": "A plataforma de comunicação padrão para comunidades e gamers."
+            "description": "A plataforma de comunica\u00e7\u00e3o padr\u00e3o para comunidades e gamers.",
+            "repo_id": "rpmfusion-nonfree-release",
+            "repo_cmd": "dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
         },
         {
             "name": "Vesktop (Discord Web)",
@@ -320,17 +330,17 @@
             "name": "Telegram Desktop",
             "package_name": "telegram-desktop",
             "icon": "telegram",
-            "description": "App de mensagens focado em velocidade e segurança."
+            "description": "App de mensagens focado em velocidade e seguran\u00e7a."
         }
     ],
-    "customização": [
+    "customiza\u00e7\u00e3o": [
         {
             "name": "Hyprland",
             "package_name": "hyprland",
             "repo_cmd": "dnf copr enable -y solopasha/hyprland",
             "repo_id": "_copr:solopasha:hyprland.repo",
             "icon": "preferences-desktop-display",
-            "description": "Compositor Wayland dinâmico com animações fluidas."
+            "description": "Compositor Wayland din\u00e2mico com anima\u00e7\u00f5es fluidas."
         },
         {
             "name": "Niri",
@@ -352,7 +362,7 @@
             "name": "Qt6ct",
             "package_name": "qt6ct",
             "icon": "preferences-desktop-theme",
-            "description": "Ferramenta de configuração para aplicativos Qt6 no GNOME/Wayland."
+            "description": "Ferramenta de configura\u00e7\u00e3o para aplicativos Qt6 no GNOME/Wayland."
         }
     ],
     "sistema": [
@@ -363,7 +373,7 @@
             "repo_id": "_copr:zinix01:linux-wifi-hotspot.repo",
             "cmd": "dnf install -y linux-wifi-hotspot && systemctl enable --now create_ap",
             "icon": "network-wireless-symbolic",
-            "description": "Cria um ponto de acesso Wi-Fi. (Habilita serviço automaticamente no boot)."
+            "description": "Cria um ponto de acesso Wi-Fi. (Habilita servi\u00e7o automaticamente no boot)."
         },
         {
             "name": "Btop",
@@ -381,7 +391,7 @@
             "name": "7-Zip",
             "package_name": "p7zip",
             "icon": "system-help",
-            "description": "A versão clássica do compactador 7zip para Linux."
+            "description": "A vers\u00e3o cl\u00e1ssica do compactador 7zip para Linux."
         },
         {
             "name": "Dolphin",
@@ -393,7 +403,7 @@
             "name": "Nautilus",
             "package_name": "nautilus",
             "icon": "nautilus",
-            "description": "O gerenciador de arquivos padrão do GNOME, simples e limpo."
+            "description": "O gerenciador de arquivos padr\u00e3o do GNOME, simples e limpo."
         }
     ]
 }
