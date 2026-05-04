@@ -131,8 +131,8 @@
         {
             "name": "Ghostty",
             "package_name": "ghostty",
-            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y pgdev/ghostty",
-            "repo_id": "_copr:pgdev:ghostty.repo",
+            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y scottames/ghostty",
+            "repo_id": "_copr:scottames:ghostty.repo",
             "icon": "ghostty",
             "description": "Terminal emulador ultrarr\u00e1pido escrito em Zig."
         }
@@ -339,16 +339,16 @@
         {
             "name": "Hyprland",
             "package_name": "hyprland",
-            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y solopasha/hyprland",
-            "repo_id": "_copr:solopasha:hyprland.repo",
+            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y sdegler/hyprland",
+            "repo_id": "_copr:sdegler:hyprland.repo",
             "icon": "preferences-desktop-display",
             "description": "Compositor Wayland din\u00e2mico com anima\u00e7\u00f5es fluidas."
         },
         {
             "name": "Niri",
             "package_name": "niri",
-            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y yuriw/niri",
-            "repo_id": "_copr:yuriw:niri.repo",
+            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y yalter/niri",
+            "repo_id": "_copr:yalter:niri.repo",
             "icon": "preferences-desktop-display",
             "description": "Compositor de janelas em 'scroll' horizontal para Wayland."
         },
