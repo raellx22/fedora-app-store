@@ -220,8 +220,8 @@
         {
             "name": "ProtonPlus",
             "package_name": "protonplus",
-            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y alvr/protonplus",
-            "repo_id": "_copr:alvr:protonplus.repo",
+            "repo_cmd": "dnf install -y 'dnf5-command(copr)' dnf-plugins-core && dnf copr enable -y wehagy/protonplus",
+            "repo_id": "_copr:wehagy:protonplus.repo",
             "icon": "proton-plus",
             "description": "Gerenciador simples de vers\u00f5es do Proton e Wine."
         }
